@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travora | Travel Planner</title>
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">TRAVORA</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#planner">Trip Planner</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="themeBtn">☀️</button>
+                <button id="menuBtn">☰</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+
+                <h1>
+                    Find a place
+                    <br>
+                    <span>worth remembering.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Discover amazing destinations and build a trip
+                    that matches your mood, time and budget.
+                </p>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Where do you want to go?"
+                    >
+
+                    <button id="searchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+                <div class="quick-search">
+                    <span>Try:</span>
+                    <button class="quick-btn">Bali</button>
+                    <button class="quick-btn">Paris</button>
+                    <button class="quick-btn">Tokyo</button>
+                    <button class="quick-btn">Dubai</button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTINATIONS -->
+        <section class="destinations section" id="destinations">
+
+            <div class="section-top">
+
+                <div>
+                    <p class="eyebrow">DISCOVER</p>
+                    <h2>Pick your next escape</h2>
+                </div>
+
+                <div class="filters">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="beach">
+                        🏖️ Beach
+                    </button>
+
+                    <button class="filter-btn" data-filter="adventure">
+                        🏔️ Adventure
+                    </button>
+
+                    <button class="filter-btn" data-filter="culture">
+                        🏛️ Culture
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-grid" id="destinationGrid">
+
+                <!-- DESTINATION 1 -->
+                <article
+                    class="destination-card"
+                    data-category="beach"
+                    data-name="Bali"
+                >
+
+                    <div class="destination-image bali">
+
+                        <span class="tag">BEACH</span>
+
+                        <button
+                            class="favorite-btn"
+                            data-place="Bali"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <div>
+                            <h3>Bali</h3>
+                            <p>Indonesia</p>
+                        </div>
+
+                        <span class="rating">★ 4.9</span>
+
+                    </div>
+
+                    <button
+                        class="details-btn"
+                        data-destination="Bali"
+                    >
+                        View Details →
+                    </button>
+
+                </article>
+
+
+                <!-- DESTINATION 2 -->
+                <article
+                    class="destination-card"
+                    data-category="culture"
+                    data-name="Paris"
+                >
+
+                    <div class="destination-image paris">
+
+                        <span class="tag">CULTURE</span>
+
+                        <button
+                            class="favorite-btn"
+                            data-place="Paris"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <div>
+                            <h3>Paris</h3>
+                            <p>France</p>
+                        </div>
+
+                        <span class="rating">★ 4.8</span>
+
+                    </div>
+
+                    <button
+                        class="details-btn"
+                        data-destination="Paris"
+                    >
+                        View Details →
+                    </button>
+
+                </article>
+
+
+                <!-- DESTINATION 3 -->
+                <article
+                    class="destination-card"
+                    data-category="adventure"
+                    data-name="Swiss Alps"
+                >
+
+                    <div class="destination-image swiss">
+
+                        <span class="tag">ADVENTURE</span>
+
+                        <button
+                            class="favorite-btn"
+                            data-place="Swiss Alps"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <div>
+                            <h3>Swiss Alps</h3>
+                            <p>Switzerland</p>
+                        </div>
+
+                        <span class="rating">★ 4.9</span>
+
+                    </div>
+
+                    <button
+                        class="details-btn"
+                        data-destination="Swiss Alps"
+                    >
+                        View Details →
+                    </button>
+
+                </article>
+
+
+                <!-- DESTINATION 4 -->
+                <article
+                    class="destination-card"
+                    data-category="culture"
+                    data-name="Tokyo"
+                >
+
+                    <div class="destination-image tokyo">
+
+                        <span class="tag">CULTURE</span>
+
+                        <button
+                            class="favorite-btn"
+                            data-place="Tokyo"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <div>
+                            <h3>Tokyo</h3>
+                            <p>Japan</p>
+                        </div>
+
+                        <span class="rating">★ 4.8</span>
+
+                    </div>
+
+                    <button
+                        class="details-btn"
+                        data-destination="Tokyo"
+                    >
+                        View Details →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRIP PLANNER -->
+        <section class="planner section" id="planner">
+
+            <div class="planner-content">
+
+                <div class="planner-text">
+
+                    <p class="eyebrow">BUILD YOUR TRIP</p>
+
+                    <h2>Create a trip made for you.</h2>
+
+                    <p>
+                        Tell us where you want to go, how long you want
+                        to stay and what kind of experience you want.
+                    </p>
+
+                </div>
+
+
+                <form id="tripForm" class="trip-form">
+
+                    <label for="tripDestination">
+                        Destination
+                    </label>
+
+                    <select id="tripDestination" required>
+
+                        <option value="">
+                            Select destination
+                        </option>
+
+                        <option value="Bali">
+                            Bali
+                        </option>
+
+                        <option value="Paris">
+                            Paris
+                        </option>
+
+                        <option value="Swiss Alps">
+                            Swiss Alps
+                        </option>
+
+                        <option value="Tokyo">
+                            Tokyo
+                        </option>
+
+                    </select>
+
+
+                    <label for="days">
+                        Number of Days
+                    </label>
+
+                    <input
+                        type="number"
+                        id="days"
+                        min="1"
+                        max="30"
+                        placeholder="e.g. 5"
+                        required
+                    >
+
+
+                    <label for="travelStyle">
+                        Travel Style
+                    </label>
+
+                    <select id="travelStyle" required>
+
+                        <option value="">
+                            Choose your style
+                        </option>
+
+                        <option value="Relax">
+                            🏖️ Relax
+                        </option>
+
+                        <option value="Adventure">
+                            🏔️ Adventure
+                        </option>
+
+                        <option value="Culture">
+                            🏛️ Culture
+                        </option>
+
+                    </select>
+
+
+                    <label for="budget">
+                        Budget per Person
+                    </label>
+
+                    <select id="budget" required>
+
+                        <option value="">
+                            Select budget
+                        </option>
+
+                        <option value="Budget">
+                            Under ₹20,000
+                        </option>
+
+                        <option value="Comfort">
+                            ₹20,000 – ₹50,000
+                        </option>
+
+                        <option value="Luxury">
+                            ₹50,000+
+                        </option>
+
+                    </select>
+
+
+                    <button type="submit" class="create-trip-btn">
+                        Create My Trip ✨
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- GENERATED TRIP WILL APPEAR HERE -->
+
+            <div
+                id="tripResult"
+                class="trip-result"
+            ></div>
+
+        </section>
+
+
+        <!-- FAVORITES -->
+        <section class="favorites section" id="favorites">
+
+            <div class="section-top">
+
+                <div>
+                    <p class="eyebrow">YOUR SAVED PLACES</p>
+                    <h2>Favorites</h2>
+                </div>
+
+                <span id="favoriteCount">
+                    0 saved
+                </span>
+
+            </div>
+
+            <div
+                id="favoritesContainer"
+                class="favorites-container"
+            >
+
+                <p class="empty-message">
+                    You haven't saved any destinations yet.
+                    Tap ♡ on a destination to save it.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUDGET CALCULATOR -->
+        <section class="calculator section">
+
+            <div class="calculator-box">
+
+                <div>
+                    <p class="eyebrow">TRAVEL BUDGET</p>
+
+                    <h2>
+                        Know your estimated cost.
+                    </h2>
+
+                    <p>
+                        Quickly calculate an estimated trip budget
+                        before you start planning.
+                    </p>
+                </div>
+
+
+                <div class="calculator-form">
+
+                    <label>
+                        Travelers
+
+                        <input
+                            type="number"
+                            id="travelers"
+                            min="1"
+                            value="1"
+                        >
+                    </label>
+
+
+                    <label>
+                        Days
+
+                        <input
+                            type="number"
+                            id="calcDays"
+                            min="1"
+                            value="3"
+                        >
+                    </label>
+
+
+                    <label>
+                        Daily Budget
+
+                        <input
+                            type="number"
+                            id="dailyBudget"
+                            min="0"
+                            value="5000"
+                        >
+                    </label>
+
+                </div>
+
+
+                <div class="total-box">
+
+                    <span>Estimated Total</span>
+
+                    <strong id="totalAmount">
+                        ₹15,000
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY US -->
+        <section class="features section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">WHY TRAVORA</p>
+
+                <h2>
+                    Travel planning, made simple.
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <span>🧭</span>
+                    <h3>Smart Discovery</h3>
+                    <p>
+                        Find destinations based on your interests
+                        and travel style.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <span>💰</span>
+                    <h3>Budget Friendly</h3>
+                    <p>
+                        Plan your journey while keeping your
+                        spending under control.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <span>❤️</span>
+                    <h3>Save Favorites</h3>
+                    <p>
+                        Keep your favorite destinations in one place
+                        for later.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div>
+
+                <p class="eyebrow">
+                    READY TO GO?
+                </p>
+
+                <h2>
+                    Your next story is waiting.
+                </h2>
+
+                <a href="#planner" class="cta-btn">
+                    Plan My Trip →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- DESTINATION MODAL -->
+    <div
+        class="modal"
+        id="destinationModal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>TRAVORA</h2>
+                <p>
+                    Plan better. Travel farther.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#planner">Planner</a>
+                <a href="#favorites">Favorites</a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Travora. Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+    <script src="script1.js"></script>
+
+</body>
+</html>
